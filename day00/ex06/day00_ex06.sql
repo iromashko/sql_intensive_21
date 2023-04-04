@@ -1,4 +1,6 @@
 select name, (case when name='Denis' then 'true' else 'false' end) as check_name
-from person
-where id in (select person_id from person_order
-             where menu_id in (13, 14, 18) and order_date = 'January 7, 2022');
+from (
+    select (select name from person where id = person_order.person_id) as name
+    from person_order
+    where (menu_id = 13 or menu_id = 14 or menu_id = 18) and order_date = 'January 7, 2022'
+) as names
