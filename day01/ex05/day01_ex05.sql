@@ -1,3 +1,3 @@
-select (select name from person where id = person_order.person_id) as name
-from person_order
-where (menu_id = 13 or menu_id = 14 or menu_id = 18) and order_date = 'January 7, 2022';
+SELECT person.id, person.name, person.age, person.gender, person.address, pizzeria.id, pizzeria.name, pizzeria.rating
+FROM person, pizzeria
+ORDER BY person.id, pizzeria.id;

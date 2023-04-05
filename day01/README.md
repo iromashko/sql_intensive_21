@@ -4,84 +4,12 @@
 
 Resume: Today you will see how to get needed data based on sets constructions and simple JOINs
 
-## Contents
-
-1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Rules of the day](#rules-of-the-day)  
-4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Let’s make UNION dance](#exercise-00-lets-make-union-dance)  
-5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - UNION dance with subquery](#exercise-01-union-dance-with-subquery)  
-6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Duplicates or not duplicates](#exercise-02-duplicates-or-not-duplicates)  
-7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - “Hidden” Insights](#exercise-03-hidden-insights)  
-8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - Difference? Yep, let's find the difference between multisets](#exercise-04-difference-yep-lets-find-the-difference-between-multisets)
-9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Did you hear about Cartesian Product?](#exercise-05-did-you-hear-about-cartesian-product)
-10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Lets see on “Hidden” Insights](#exercise-06-lets-see-on-hidden-insights)
-11. [Chapter XI](#chapter-xi) \
-    11.1. [Exercise 07 - Just make a JOIN](#exercise-07-just-make-a-join)
-12. [Chapter XII](#chapter-xii) \
-    12.1. [Exercise 08 - Migrate JOIN to NATURAL JOIN](#exercise-08-migrate-join-to-natural-join)
-13. [Chapter XIII](#chapter-xiii) \
-    13.1. [Exercise 09 - IN versus EXISTS](#exercise-09-in-versus-exists)
-14. [Chapter XIV](#chapter-xiv) \
-    14.1. [Exercise 10 - Global JOIN](#exercise-10-global-join)
-
-
-## Chapter I
-## Preamble
-
-![D01_01](misc/images/D01_01.png)
-
-In many aspects, sets are used in Relational Databases. Not just, make UNION or find MINUS between sets. Sets are also good candidates to make recursive queries.
-
-There are the next set operators in PostgreSQL. 
-- UNION [ALL]
-- EXCEPT [ALL] 
-- INTERSECT [ALL]
-
-Keyword “ALL” means to save duplicates of rows in the result.
-The main rules to work with sets are below
-- The main SQL provides a final names of attributes for whole query
-- The attributes of controlled SQL should satisfied number of columns and corresponding family types of main SQL
-
-![D01_02](misc/images/D01_02.png)
-
-Moreover, SQL sets are useful  to calculate some specific Data Science metrics, for example Jaccard distance between 2 objects based on existing data features.
-
-
-## Chapter II
-## General Rules
-
-- Use this page as the only reference. Do not listen to any rumors and speculations on how to prepare your solution.
-- Please make sure you are using the latest version of PostgreSQL.
-- That is completely OK if you are using IDE to write a source code (aka SQL script).
-- To be assessed your solution must be in your GIT repository.
-- Your solutions will be evaluated by your piscine mates.
-- You should not leave in your directory any other file than those explicitly specified by the exercise instructions. It is recommended that you modify your `.gitignore` to avoid accidents.
-- Do you have a question? Ask your neighbor on the right. Otherwise, try with your neighbor on the left.
-- Your reference manual: mates / Internet / Google. 
-- Read the examples carefully. They may require things that are not otherwise specified in the subject.
-- And may the SQL-Force be with you!
-- Absolutely everything can be presented in SQL! Let’s start and have fun!
-
-## Chapter III
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
-- Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). 
+- Please download a script (model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). 
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at the section before you start.
-- Please take a look at the Logical View of our Database Model. 
-
-![schema](misc/images/schema.png)
+- Please take a look at the Logical View of our Database Model.
 
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
@@ -111,7 +39,6 @@ Moreover, SQL sets are useful  to calculate some specific Data Science metrics, 
 - field order_date - date (for example 2022-01-01) of person order 
 
 
-## Chapter IV
 ## Exercise 00 - Let’s make UNION dance
 
 | Exercise 00: Let’s make UNION dance |                                                                                                                          |
@@ -166,7 +93,7 @@ Please modify a SQL statement from “exercise 00” by removing the object_id c
 | **Denied**                               |                                                                                                                          |
 | SQL Syntax Construction                        | `DISTINCT`, `GROUP BY`, `HAVING`, any type of `JOINs`                                                                                              |
 
-Please write a SQL which returns unique pizza names from the `menu` table and ordering by pizza_name column in descending mode. Please pay attention to the Denied section.
+Please write a SQL statement which returns unique pizza names from the menu table and orders by pizza_name column in descending mode. Please pay attention to the Denied section.
 
 ## Chapter VII
 ## Exercise 03 - “Hidden” Insights
@@ -215,7 +142,7 @@ Please write a SQL statement which returns a difference (minus) of person_id col
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
-Please write a SQL statement which returns all possible combinations between `person` and `pizzeria` tables and please set ordering by person identifier and then by pizzeria identifier columns. Please take a look at the result sample below.
+Please write a SQL statement which returns all possible combinations between `person` and `pizzeria` tables and please set ordering by person identifier and then by pizzeria identifier columns. Please take a look at the result sample below. Please be aware column's names can be different for you.
 
 | person.id | person.name | age | gender | address | pizzeria.id | pizzeria.name | rating |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
