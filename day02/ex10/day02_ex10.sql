@@ -1,6 +1,4 @@
-select person.name as person_name, pizza_name, pizzeria.name as pizzeria_name
-from person_order
-join person on person_order.person_id = person.id
-join menu on person_order.menu_id = menu.id
-join pizzeria on menu.pizzeria_id = pizzeria.id
-order by person_name, pizza_name, pizzeria_name;
+select distinct p1.name as person_name1, p2.name as person_name2, p1.address as common_address
+from person p1
+join person p2 on p1.address = p2.address and p1.id > p2.id
+order by p1.name, p2.name, p1.address;

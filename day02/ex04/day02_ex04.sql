@@ -1,5 +1,5 @@
-select person_id from person_order
-where order_date = 'January 7, 2022'
-except all
-select person_id from person_visits
-where visit_date = 'January 7, 2022';
+select pizza_name, pizzeria.name, price
+from menu
+left join pizzeria on menu.pizzeria_id = pizzeria.id
+where pizza_name = 'mushroom pizza' or pizza_name = 'pepperoni pizza'
+order by pizza_name, pizzeria.name;

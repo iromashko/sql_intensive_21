@@ -1,8 +1,9 @@
 select name
-from pizzeria
-where id not in (select pizzeria_id from person_visits);
-
-select name
-from pizzeria
-where not exists(select pizzeria_id from person_visits
-                 where pizzeria_id = pizzeria.id);
+from person_order
+join person on person_order.person_id = person.id
+join menu on person_order.menu_id = menu.id
+where gender = 'female' and pizza_name = 'pepperoni pizza' and exists (
+    select *
+    from person_order
+    join menu on person_order.menu_id = menu.id
+    where person_order.person_id = person.id and menu.pizza_name = 'cheese pizza')

@@ -1,4 +1,10 @@
-select order_date, concat(name, '(age:', age, ')') as person_information
-from (select person_id as id, order_date from person_order) as po
-natural join person
-order by order_date, person_information;
+select person.name
+from person_order
+join menu on person_order.menu_id = menu.id
+join person on person_order.person_id = person.id
+where (pizza_name = 'pepperoni pizza' or  pizza_name = 'mushroom pizza') and
+      gender = 'male' and (address = 'Moscow' or address = 'Samara')
+order by person.name desc;
+
+
+

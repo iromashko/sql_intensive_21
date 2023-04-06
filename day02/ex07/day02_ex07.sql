@@ -1,4 +1,6 @@
-select order_date, concat(name, '(age:', age, ')') as person_information
-from person_order
-join person on person_order.person_id = person.id
-order by order_date, person_information;
+select pizzeria.name from person_visits
+join person on person_visits.person_id = person.id
+join menu on person_visits.pizzeria_id = menu.pizzeria_id
+join pizzeria on person_visits.pizzeria_id = pizzeria.id
+where visit_date ='January 8, 2022' and menu.price < 800;
+
