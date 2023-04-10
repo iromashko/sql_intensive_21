@@ -1,12 +1,12 @@
-with al as
-        (select p.gender, piz.name as pizzeria_name
-        from person_visits pv join person p on pv.person_id = p.id
-        join pizzeria piz on piz.id = pv.pizzeria_id),
-    mans as (select pizzeria_name from al where gender = 'male'),
-    womans as (select pizzeria_name from al where gender = 'female')
+with persons as (select gender, p2.name as pizzeria_name
+                 from person_visits
+                 join person p on person_visits.person_id = p.id
+                 join pizzeria p2 on person_visits.pizzeria_id = p2.id),
+    men as (select pizzeria_name from persons where gender = 'male'),
+    women as (select pizzeria_name from persons where gender = 'female')
 select pizzeria_name
 from (
-    (select * from mans except all select * from womans)
+    (select * from men except all select * from women)
     union all
-    (select * from womans except all select * from mans)) as t1
-order by 1;
+    (select * from women except all select  * from men)) as t1
+order by pizzeria_name;
