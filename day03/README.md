@@ -1,8 +1,10 @@
 # Day 03 - Piscine SQL
 
+
 ## _Continuing to JOIN and make change in data_
 
 Resume: Today you will see how to change data based on DML language
+
 
 ## Rules of the day
 
@@ -10,7 +12,6 @@ Resume: Today you will see how to change data based on DML language
 - Please download a script (model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). 
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at the section before you start.
 - Please take a look at the Logical View of our Database Model.
-
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key
@@ -43,12 +44,12 @@ Persons' visit and persons' order are different entities and don't contain any c
 
 ## Exercise 00 - Let’s find appropriate prices for Kate
 
-| Exercise 00: Let’s find appropriate prices for Kate |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex00                                                                                                                     |
-| Files to turn-in                      | `day04_ex00.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 00: Let’s find appropriate prices for Kate |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex00             |
+| Files to turn-in                      | `day03_ex00.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please write a SQL statement which returns a list of pizza names, pizza prices, pizzerias names and dates of visit for Kate and for prices in range from 800 to 1000 rubles. Please sort by pizza, price and pizzeria names. Take a look at the sample of data below.
 
@@ -62,14 +63,14 @@ Please write a SQL statement which returns a list of pizza names, pizza prices, 
 
 ## Exercise 01 - Let’s find forgotten menus
 
-| Exercise 01: Let’s find forgotten menus|                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex01                                                                                                                     |
-| Files to turn-in                      | `day04_ex01.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
-| **Denied**                               |                                                                                                                          |
-| SQL Syntax Construction                        | any type of `JOINs`                                                                                              |
+| Exercise 01: Let’s find forgotten menus|                     |
+|---------------------------------------|---------------------|
+| Turn-in directory                     | ex01                |
+| Files to turn-in                      | `day03_ex01.sql`    |
+| **Allowed**                               |                     |
+| Language                        | ANSI SQL            |
+| **Denied**                               |                     |
+| SQL Syntax Construction                        | any type of `JOINs` |
 
 Please find all menu identifiers which are not ordered by anyone. The result should be sorted by identifiers. The sample of output data is presented below.
 
@@ -82,12 +83,12 @@ Please find all menu identifiers which are not ordered by anyone. The result sho
 
 ## Exercise 02 - Let’s find forgotten pizza and pizzerias
 
-| Exercise 02: Let’s find forgotten pizza and pizzerias|                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex02                                                                                                                     |
-| Files to turn-in                      | `day04_ex02.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 02: Let’s find forgotten pizza and pizzerias|                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex02             |
+| Files to turn-in                      | `day03_ex02.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please use SQL statement from Exercise #01 and show pizza names from pizzeria which are not ordered by anyone, including corresponding prices also. The result should be sorted by pizza name and price. The sample of output data is presented below.
 
@@ -100,16 +101,14 @@ Please use SQL statement from Exercise #01 and show pizza names from pizzeria wh
 
 ## Exercise 03 - Let’s compare visits
 
-| Exercise 03: Let’s compare visits |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex03                                                                                                                     |
-| Files to turn-in                      | `day04_ex03.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 03: Let’s compare visits |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex03             |
+| Files to turn-in                      | `day03_ex03.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please find a union of pizzerias that have been visited either women or men. Other words, you should find a set of pizzerias names have been visited by females only and make "UNION" operation with set of pizzerias names have been visited by males only. Please be aware with word “only” for both genders. For any SQL operators with sets save duplicates (`UNION ALL`, `EXCEPT ALL`, `INTERSECT ALL` constructions). Please sort a result by the pizzeria name. The data sample is provided below.
-
-
 
 | pizzeria_name | 
 | ------ | 
@@ -120,16 +119,14 @@ Please find a union of pizzerias that have been visited either women or men. Oth
 
 ## Exercise 04 - Let’s compare orders
 
-
-| Exercise 04: Let’s compare orders |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex04                                                                                                                     |
-| Files to turn-in                      | `day04_ex04.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 04: Let’s compare orders |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex04             |
+| Files to turn-in                      | `day03_ex04.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please find a union of pizzerias that have orders either from women or  from men. Other words, you should find a set of pizzerias names have been ordered by females only and make "UNION" operation with set of pizzerias names have been ordered by males only. Please be aware with word “only” for both genders. For any SQL operators with sets don’t save duplicates (`UNION`, `EXCEPT`, `INTERSECT`).  Please sort a result by the pizzeria name. The data sample is provided below.
-
 
 | pizzeria_name | 
 | ------ | 
@@ -138,16 +135,14 @@ Please find a union of pizzerias that have orders either from women or  from men
 
 ## Exercise 05 - Visited but did not make any order
 
-
-| Exercise 05: Visited but did not make any order |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex05                                                                                                                     |
-| Files to turn-in                      | `day04_ex05.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 05: Visited but did not make any order |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex05             |
+| Files to turn-in                      | `day03_ex05.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please write a SQL statement which returns a list of pizzerias which Andrey visited but did not make any orders. Please order by the pizzeria name. The sample of data is provided below.
-
 
 | pizzeria_name | 
 | ------ | 
@@ -157,13 +152,12 @@ Please write a SQL statement which returns a list of pizzerias which Andrey visi
 
 ## Exercise 06 - Find price-similarity pizzas
 
-
-| Exercise 06: Find price-similarity pizzas |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex06                                                                                                                     |
-| Files to turn-in                      | `day04_ex06.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 06: Find price-similarity pizzas |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex06             |
+| Files to turn-in                      | `day03_ex06.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please find the same pizza names who have the same price, but from different pizzerias. Make sure that the result is ordered by pizza name. The sample of data is presented below. Please make sure your column names are corresponding column names below.
 
@@ -174,7 +168,6 @@ Please find the same pizza names who have the same price, but from different piz
 
 
 ## Exercise 07 - Let’s cook a new type of pizza
-
 
 | Exercise 07: Let’s cook a new type of pizza |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -188,7 +181,6 @@ Please register a new pizza with name “greek pizza” (use id = 19) with price
 
 
 ## Exercise 08 - Let’s cook a new type of pizza with more dynamics
-
 
 | Exercise 08: Let’s cook a new type of pizza with more dynamics |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -205,7 +197,6 @@ Please register a new pizza with name “sicilian pizza” (whose id should be c
 
 ## Exercise 09 - New pizza means new visits
 
-
 | Exercise 09: New pizza means new visits |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex09                                                                                                                     |
@@ -220,7 +211,6 @@ Please register new visits into Domino's restaurant from Denis and Irina on 24th
 
 
 ## Exercise 10 - New visits means new orders
-
 
 | Exercise 10: New visits means new orders |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -238,7 +228,6 @@ Please register new orders from Denis and Irina on 24th of February 2022 for the
 
 ## Exercise 11 - “Improve” a price for clients
 
-
 | Exercise 11: “Improve” a price for clients|                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex11                                                                                                                     |
@@ -251,7 +240,6 @@ Please change the price for “greek pizza” on -10% from the current value.
 
 
 ## Exercise 12 - New orders are coming!
-
 
 | Exercise 12: New orders are coming!|                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -272,7 +260,6 @@ Please register new orders from all persons for “greek pizza” by 25th of Feb
 
 
 ## Exercise 13 - Money back to our customers
-
 
 | Exercise 13: Money back to our customers|                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|

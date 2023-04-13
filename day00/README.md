@@ -64,12 +64,12 @@ Please make a select statement which returns names , ages for all women from the
 ## Chapter VI
 ## Exercise 02 - First steps into SQL world
 
-| Exercise 02: First steps into SQL world |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex02                                                                                                                     |
-| Files to turn-in                      | `day02_ex02.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 02: First steps into SQL world |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex02             |
+| Files to turn-in                      | `day00_ex02.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please make 2 syntax different select statements which return a list of pizzerias (pizzeria name and rating) with rating between 3.5 and 5 points (including limit points) and ordered by pizzeria rating.
 - the 1st select statement must contain comparison signs  (<=, >=)
@@ -78,12 +78,12 @@ Please make 2 syntax different select statements which return a list of pizzeria
 ## Chapter VII
 ## Exercise 03 - First steps into SQL world
 
-| Exercise 03: First steps into SQL world |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex03                                                                                                                     |
-| Files to turn-in                      | `day02_ex03.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 03: First steps into SQL world |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex03             |
+| Files to turn-in                      | `day00_ex03.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please make a select statement which returns the person's identifiers (without duplication) which visited pizzerias in a period from 6th of January 2022 to 9th of January 2022 (including all days) or visited pizzeria with identifier 2. Also include ordering clause by person identifier in descending mode.
 
@@ -91,12 +91,12 @@ Please make a select statement which returns the person's identifiers (without d
 ## Exercise 04 - First steps into SQL world
 
 
-| Exercise 04: First steps into SQL world |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex04                                                                                                                     |
-| Files to turn-in                      | `day02_ex04.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 04: First steps into SQL world |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex04             |
+| Files to turn-in                      | `day00_ex04.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please make a select statement which returns one calculated field with name ‘person_information’ in one string like described in the next sample:
 
@@ -109,14 +109,14 @@ Please pay attention to quote symbols in your formula!
 ## Exercise 05 - First steps into SQL world
 
 
-| Exercise 05: First steps into SQL world |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex05                                                                                                                     |
-| Files to turn-in                      | `day02_ex05.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 05: First steps into SQL world |                            |
+|---------------------------------------|----------------------------|
+| Turn-in directory                     | ex05                       |
+| Files to turn-in                      | `day00_ex05.sql`           |
+| **Allowed**                               |                            |
+| Language                        | ANSI SQL                   |
 | **Denied**                               |                                           
-| SQL Syntax Construction                        | `IN`, any types of `JOINs`                                                                                              |
+| SQL Syntax Construction                        | `IN`, any types of `JOINs` |
 
 Please make a select statement which returns person's names (based on internal query in `SELECT` clause) which made orders for the menu with identifiers 13 , 14 and 18 and date of orders should equal 7th of January 2022. Please be aware with "Denied Section" before your work.
 
@@ -131,14 +131,14 @@ Please take a look at the pattern of internal query.
 ## Exercise 06 - First steps into SQL world
 
 
-| Exercise 06: First steps into SQL world |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex06                                                                                                                     |
-| Files to turn-in                      | `day02_ex06.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 06: First steps into SQL world |                            |
+|---------------------------------------|----------------------------|
+| Turn-in directory                     | ex06                       |
+| Files to turn-in                      | `day00_ex06.sql`           |
+| **Allowed**                               |                            |
+| Language                        | ANSI SQL                   |
 | **Denied**                               |                                           
-| SQL Syntax Construction                        | `IN`, any types of `JOINs`                                                                                              |
+| SQL Syntax Construction                        | `IN`, any types of `JOINs` |
 
 Please use SQL construction from Exercise 05 and add a new calculated column (use column's name ‘check_name’) with a check statement (a pseudo code for this check is presented below) in the `SELECT` clause.
 
@@ -152,7 +152,7 @@ Please use SQL construction from Exercise 05 and add a new calculated column (us
 | Exercise 07: First steps into SQL world |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex07                                                                                                                     |
-| Files to turn-in                      | `day02_ex07.sql`                                                                                 |
+| Files to turn-in                      | `day04_ex07.sql`                                                                                 |
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
@@ -172,7 +172,7 @@ and yes...please sort a result by ‘interval_info’ column in ascending mode.
 | Exercise 08: First steps into SQL world |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex08                                                                                                                     |
-| Files to turn-in                      | `day02_ex08.sql`                                                                                 |
+| Files to turn-in                      | `day04_ex08.sql`                                                                                 |
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
@@ -185,7 +185,7 @@ Please make a SQL statement which returns all columns from the `person_order` ta
 | Exercise 09: First steps into SQL world |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex09                                                                                                                     |
-| Files to turn-in                      | `day02_ex10.sql`                                                                                 |
+| Files to turn-in                      | `day04_ex10.sql`                                                                                 |
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 | **Denied**                               |                                           

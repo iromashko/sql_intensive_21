@@ -1,8 +1,10 @@
 # Day 01 - Piscine SQL
 
+
 ## _First steps working with sets and JOINs in SQL_
 
 Resume: Today you will see how to get needed data based on sets constructions and simple JOINs
+
 
 ## Rules of the day
 
@@ -10,7 +12,6 @@ Resume: Today you will see how to get needed data based on sets constructions an
 - Please download a script (model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). 
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at the section before you start.
 - Please take a look at the Logical View of our Database Model.
-
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key
@@ -41,12 +42,12 @@ Resume: Today you will see how to get needed data based on sets constructions an
 
 ## Exercise 00 - Let’s make UNION dance
 
-| Exercise 00: Let’s make UNION dance |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex00                                                                                                                     |
-| Files to turn-in                      | `day02_ex00.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 00: Let’s make UNION dance |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex00             |
+| Files to turn-in                      | `day01_ex00.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please write a SQL statement which returns menu’s identifier and pizza names from `menu` table and person’s identifier and person name from `person` table in one global list (with column names are presented on a sample below) ordered by object_name column.
 
@@ -58,8 +59,6 @@ Please write a SQL statement which returns menu’s identifier and pizza names f
 | ... | ... |
 
 
-
-## Chapter V
 ## Exercise 01 - UNION dance with subquery
 
 | Exercise 01: UNION dance with subquery|                                                                                                                          |
@@ -81,31 +80,30 @@ Please modify a SQL statement from “exercise 00” by removing the object_id c
 | ... |
 
 
-## Chapter VI
 ## Exercise 02 - Duplicates or not duplicates
 
-| Exercise 02: Duplicates or not duplicates|                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex02                                                                                                                     |
-| Files to turn-in                      | `day02_ex02.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
-| **Denied**                               |                                                                                                                          |
-| SQL Syntax Construction                        | `DISTINCT`, `GROUP BY`, `HAVING`, any type of `JOINs`                                                                                              |
+| Exercise 02: Duplicates or not duplicates|                                                       |
+|---------------------------------------|-------------------------------------------------------|
+| Turn-in directory                     | ex02                                                  |
+| Files to turn-in                      | `day01_ex02.sql`                                      |
+| **Allowed**                               |                                                       |
+| Language                        | ANSI SQL                                              |
+| **Denied**                               |                                                       |
+| SQL Syntax Construction                        | `DISTINCT`, `GROUP BY`, `HAVING`, any type of `JOINs` |
 
 Please write a SQL statement which returns unique pizza names from the menu table and orders by pizza_name column in descending mode. Please pay attention to the Denied section.
 
-## Chapter VII
+
 ## Exercise 03 - “Hidden” Insights
 
-| Exercise 03: “Hidden” Insights |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex03                                                                                                                     |
-| Files to turn-in                      | `day02_ex03.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
-| **Denied**                               |                                                                                                                          |
-| SQL Syntax Construction                        |  any type of `JOINs`                                                                                              |
+| Exercise 03: “Hidden” Insights |                     |
+|---------------------------------------|---------------------|
+| Turn-in directory                     | ex03                |
+| Files to turn-in                      | `day01_ex03.sql`    |
+| **Allowed**                               |                     |
+| Language                        | ANSI SQL            |
+| **Denied**                               |                     |
+| SQL Syntax Construction                        | any type of `JOINs` |
 
 Please write a SQL statement which returns common rows for attributes order_date, person_id from `person_order` table from one side and visit_date, person_id from `person_visits` table from other side (please see a sample below). Other words, let’s find persons' identifiers which visited and then ordered some pizza on the same day. Actually, please add ordering by action_date in ascending mode and then by person_id by descending mode.
 
@@ -116,31 +114,29 @@ Please write a SQL statement which returns common rows for attributes order_date
 | 2022-01-01 | 1 |
 | ... | ... |
 
-## Chapter VIII
+
 ## Exercise 04 - Difference? Yep, let's find the difference between multisets.
 
-
-| Exercise 04: Difference? Yep, let's find the difference between multisets. |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex04                                                                                                                     |
-| Files to turn-in                      | `day02_ex04.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
-| **Denied**                               |                                                                                                                          |
-| SQL Syntax Construction                        |  any type of `JOINs`                                                                                              |
+| Exercise 04: Difference? Yep, let's find the difference between multisets. |                     |
+|---------------------------------------|---------------------|
+| Turn-in directory                     | ex04                |
+| Files to turn-in                      | `day01_ex04.sql`    |
+| **Allowed**                               |                     |
+| Language                        | ANSI SQL            |
+| **Denied**                               |                     |
+| SQL Syntax Construction                        | any type of `JOINs` |
 
 Please write a SQL statement which returns a difference (minus) of person_id column with saving duplicates between `person_order` table and `person_visits` table for order_date and visit_date are for 7th of January of 2022
 
-## Chapter IX
+
 ## Exercise 05 - Did you hear about Cartesian Product?
 
-
-| Exercise 05: Did you hear about Cartesian Product? |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex05                                                                                                                     |
-| Files to turn-in                      | `day02_ex05.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 05: Did you hear about Cartesian Product? |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex05             |
+| Files to turn-in                      | `day01_ex05.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Please write a SQL statement which returns all possible combinations between `person` and `pizzeria` tables and please set ordering by person identifier and then by pizzeria identifier columns. Please take a look at the result sample below. Please be aware column's names can be different for you.
 
@@ -151,16 +147,14 @@ Please write a SQL statement which returns all possible combinations between `pe
 | ... | ... | ... | ... | ... | ... | ... | ... |
 
 
-## Chapter X
 ## Exercise 06 - Lets see on “Hidden” Insights
 
-
-| Exercise 06: Lets see on “Hidden” Insights |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex06                                                                                                                     |
-| Files to turn-in                      | `day02_ex06.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 06: Lets see on “Hidden” Insights |                  |
+|---------------------------------------|------------------|
+| Turn-in directory                     | ex06             |
+| Files to turn-in                      | `day01_ex06.sql` |
+| **Allowed**                               |                  |
+| Language                        | ANSI SQL         |
 
 Let's return our mind back to exercise #03 and change our SQL statement to return person names instead of person identifiers and change ordering by action_date in ascending mode and then by person_name by descending mode. Please take a look at a sample of data below.
 
@@ -171,14 +165,13 @@ Let's return our mind back to exercise #03 and change our SQL statement to retur
 | 2022-01-01 | Andrey |
 | ... | ... |
 
-## Chapter XI
-## Exercise 07 - Just make a JOIN
 
+## Exercise 07 - Just make a JOIN
 
 | Exercise 07: Just make a JOIN |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex07                                                                                                                     |
-| Files to turn-in                      | `day02_ex07.sql`                                                                                 |
+| Files to turn-in                      | `day04_ex07.sql`                                                                                 |
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
@@ -192,14 +185,12 @@ Please write a SQL statement which returns the date of order from the `person_or
 | ... | ... |
 
 
-## Chapter XII
 ## Exercise 08 - Migrate JOIN to NATURAL JOIN
-
 
 | Exercise 08: Migrate JOIN to NATURAL JOIN |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex08                                                                                                                     |
-| Files to turn-in                      | `day02_ex08.sql`                                                                                 |
+| Files to turn-in                      | `day04_ex08.sql`                                                                                 |
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 | SQL Syntax Construction                        | `NATURAL JOIN`                                                                                              |
@@ -208,27 +199,25 @@ Please write a SQL statement which returns the date of order from the `person_or
 
 Please rewrite a SQL statement from exercise #07 by using NATURAL JOIN construction. 
 
-## Chapter XIII
-## Exercise 09 - IN versus EXISTS
 
+## Exercise 09 - IN versus EXISTS
 
 | Exercise 09: IN versus EXISTS |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex09                                                                                                                     |
-| Files to turn-in                      | `day02_ex10.sql`                                                                                 |
+| Files to turn-in                      | `day04_ex10.sql`                                                                                 |
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
 Please write a 2 SQL statements which returns a list of pizzerias names which have not been visited by persons by using IN for 1st one and EXISTS for the 2nd one.
 
-## Chapter XIV
-## Exercise 10 - Global JOIN
 
+## Exercise 10 - Global JOIN
 
 | Exercise 10: Global JOIN |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex10                                                                                                                     |
-| Files to turn-in                      | `day02_ex10.sql`                                                                                 |
+| Files to turn-in                      | `day04_ex10.sql`                                                                                 |
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
